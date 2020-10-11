@@ -1,1 +1,81 @@
-<p>visitorform works!</p>
+<section id="visitorsForms p-5">
+  <div class="container-fluid m-5">
+    <form [formGroup]="visitorsEntry">
+      <div>
+        <label>
+          Name:
+          <input type="text" formControlName="name" />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Email:
+          <input type="email" formControlName="email" />
+        </label>
+      </div>
+
+      <div>
+        <label> Type Of Visit: </label><br />
+        <input
+          type="radio"
+          formControlName="type"
+          id="type1"
+          value="Meeting"
+          class="mr-2"
+        />
+        <label for="type1" class="mr-2">Meeting</label>
+
+        <input
+          formControlName="type"
+          type="radio"
+          id="type2"
+          value="Delivery"
+          class="mr-2"
+        />
+        <label for="type2" class="mr-2">Delivery</label>
+
+        <input
+          type="radio"
+          formControlName="type"
+          id="type3"
+          value="Personal"
+          class="mr-2"
+        />
+        <label for="type3" class="mr-2">Personal</label>
+      </div>
+
+      <div>
+        <label>
+          Person to Visit:
+          <input type="text" formControlName="personName" />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Date of Visit
+          <input type="text" formControlName="dateOfVisit" />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Time of Entry
+          <input type="time" formControlName="timeToVisit" />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Time of Leave
+          <input type="time" formControlName="timeToLeave" />
+        </label>
+      </div>
+
+      <div>
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>

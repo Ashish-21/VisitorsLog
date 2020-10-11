@@ -7,10 +7,21 @@ import { NewsComponent } from './news/news.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { VisitorformComponent } from './visitorform/visitorform.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, NewsComponent, HeaderComponent, VisitorformComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, NgbModule],
+  declarations: [
+    AppComponent,
+    NewsComponent,
+    HeaderComponent,
+    VisitorformComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    NgbModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
