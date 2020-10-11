@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
+import { VisitorformComponent } from './visitorform/visitorform.component';
 
 @NgModule({
-  declarations: [AppComponent, NewsComponent, HeaderComponent],
+  declarations: [AppComponent, NewsComponent, HeaderComponent, VisitorformComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,23 @@
-<div *ngFor="let news of newsArticles">
-  <p>{{ news.source.name }}</p>
-  <p>asd</p>
-</div>
+<section id="news" class="p-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div *ngFor="let newsItem of newsArticles" class="col-md-3">
+        <div class="card m-2" style="width: 18rem; height: 25rem">
+          <div class="card-header">{{ newsItem.source.name }}</div>
+          <img
+            class="card-img-top"
+            src="{{ newsItem.urlToImage }}"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ title }}</h5>
+            <p class="card-text">
+              {{ newsItem.title }}
+            </p>
+          </div>
+          <div class="card-footer text-muted">{{ newsItem.author }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
