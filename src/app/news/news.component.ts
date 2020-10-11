@@ -8,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
   newsArticles: Array<any>;
+  loading: boolean;
   constructor(private newsService: NewsService) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.newsService.getNews().subscribe((data) => {
       this.newsArticles = data['articles'];
+      this.loading = false;
     });
   }
 }

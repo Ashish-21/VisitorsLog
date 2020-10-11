@@ -2,6 +2,11 @@
   <div class="news-heading" style="text-align: center">
     <h1>News</h1>
   </div>
+  <div *ngIf="loading">
+    <div class="alert alert-info">
+      <strong>Please Wait...</strong>
+    </div>
+  </div>
   <div class="container-fluid">
     <div class="row">
       <div *ngFor="let newsItem of newsArticles" class="col-md-3">
