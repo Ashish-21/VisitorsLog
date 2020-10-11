@@ -1,4 +1,4 @@
-<section id="visitorsForms" class="p-5">
+<section id="visitorsForms" class="p-2">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 visitor-heading">
@@ -8,19 +8,17 @@
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
         <form [formGroup]="visitorsEntry" class="card card-layout shadow">
-          <div class="inputs">
-            <label> Name: </label>
-            <input type="text" formControlName="name" />
+          <div class="inputs form-group">
+            <label for="name"> Name: </label>
+            <input type="text" formControlName="name" class="form-control"  id="name"/>
           </div>
 
-          <div class="inputs">
-            <label>
-              Email:
-              <input type="email" formControlName="email" />
-            </label>
+          <div class="inputs form-group">
+            <label for="email"> Email Id: </label>
+            <input type="text" formControlName="email" class="form-control"  id="email" />
           </div>
 
-          <div class="inputs">
+          <div class="inputs form-group">
             <label> Type Of Visit: </label><br />
             <input
               type="radio"
@@ -30,7 +28,6 @@
               class="mr-2"
             />
             <label for="type1" class="mr-2">Meeting</label>
-
             <input
               formControlName="typeOfVisit"
               type="radio"
@@ -39,7 +36,7 @@
               class="mr-2"
             />
             <label for="type2" class="mr-2">Delivery</label>
-
+            
             <input
               type="radio"
               formControlName="typeOfVisit"
@@ -50,31 +47,29 @@
             <label for="type3" class="mr-2">Personal</label>
           </div>
 
-          <div class="inputs">
-            <label>
-              Person to Visit:
-              <input type="text" formControlName="personNameToVisit" />
-            </label>
+          <div class="inputs form-group">
+            <label for="personToVisit"> Person to Visit: </label>
+            <input type="text" formControlName="personNameToVisit" class="form-control"  id="personToVisit" />
           </div>
 
-          <div class="inputs">
+          <div class="inputs form-group">
             <label>
               Date of Visit
-              <input type="text" formControlName="dateOfVisit" readonly />
+              <input type="text" formControlName="dateOfVisit" readonly  class="form-control"/>
             </label>
           </div>
 
           <div class="inputs">
             <label>
               Time of Entry
-              <input type="time" formControlName="timeOfVisit" />
+              <input type="time" formControlName="timeOfVisit" class="form-control" />
             </label>
           </div>
 
           <div class="inputs">
             <label>
               Time of Leave
-              <input type="time" formControlName="timeOfLeave" />
+              <input type="time" formControlName="timeOfLeave" class="form-control" />
             </label>
           </div>
 
