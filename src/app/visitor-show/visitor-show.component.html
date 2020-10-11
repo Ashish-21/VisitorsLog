@@ -1,0 +1,43 @@
+<section id="visitorShow" class="p-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div *ngFor="let visitorItem of visitorsDisplay" class="col-md-3">
+        <div class="card m-2" style="width: 18rem">
+          <div class="card-body">
+            <p class="card-title">
+              <span>Name:</span>
+              {{ visitorItem.name }}
+            </p>
+            <p class="card-text">
+              <span>Email ID:</span>
+              {{ visitorItem.email }}
+            </p>
+            <p class="card-text">
+              <span>Type of Visit:</span>
+              {{ visitorItem.typeOfVisit }}
+            </p>
+            <p class="card-text">
+              <span>Person To Visit:</span>
+              {{ visitorItem.personNameToVisit }}
+            </p>
+            <p class="card-text">
+              <span>Date of Visit:</span>
+              {{ visitorItem.dateOfVisit }}
+            </p>
+
+            <p class="card-text">
+              <span>Time of Visit:</span>
+              {{ visitorItem.timeOfVisit }}
+            </p>
+
+            <p class="card-text">
+              <span>Time of leave:</span>
+              {{ visitorItem.timeOfLeave }}
+            </p>
+          </div>
+          <div class="card-footer text-muted"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

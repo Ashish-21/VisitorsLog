@@ -1,81 +1,96 @@
-<section id="visitorsForms p-5">
-  <div class="container-fluid m-5">
-    <form [formGroup]="visitorsEntry">
-      <div>
-        <label>
-          Name:
-          <input type="text" formControlName="name" />
-        </label>
+<section id="visitorsForms" class="p-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 visitor-heading">
+        <h1>Visitor Form</h1>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center border p-5">
+        <form [formGroup]="visitorsEntry">
+          <div>
+            <label>
+              Name:
+              <input type="text" formControlName="name" />
+            </label>
+          </div>
 
-      <div>
-        <label>
-          Email:
-          <input type="email" formControlName="email" />
-        </label>
+          <div>
+            <label>
+              Email:
+              <input type="email" formControlName="email" />
+            </label>
+          </div>
+
+          <div>
+            <label> Type Of Visit: </label><br />
+            <input
+              type="radio"
+              formControlName="typeOfVisit"
+              id="type1"
+              value="Meeting"
+              class="mr-2"
+            />
+            <label for="type1" class="mr-2">Meeting</label>
+
+            <input
+              formControlName="typeOfVisit"
+              type="radio"
+              id="type2"
+              value="Delivery"
+              class="mr-2"
+            />
+            <label for="type2" class="mr-2">Delivery</label>
+
+            <input
+              type="radio"
+              formControlName="typeOfVisit"
+              id="type3"
+              value="Personal"
+              class="mr-2"
+            />
+            <label for="type3" class="mr-2">Personal</label>
+          </div>
+
+          <div>
+            <label>
+              Person to Visit:
+              <input type="text" formControlName="personNameToVisit" />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Date of Visit
+              <input type="text" formControlName="dateOfVisit" readonly />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Time of Entry
+              <input type="time" formControlName="timeOfVisit" />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Time of Leave
+              <input type="time" formControlName="timeOfLeave" />
+            </label>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              (click)="submitForm()"
+              class="btn btn-primary"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
-
-      <div>
-        <label> Type Of Visit: </label><br />
-        <input
-          type="radio"
-          formControlName="type"
-          id="type1"
-          value="Meeting"
-          class="mr-2"
-        />
-        <label for="type1" class="mr-2">Meeting</label>
-
-        <input
-          formControlName="type"
-          type="radio"
-          id="type2"
-          value="Delivery"
-          class="mr-2"
-        />
-        <label for="type2" class="mr-2">Delivery</label>
-
-        <input
-          type="radio"
-          formControlName="type"
-          id="type3"
-          value="Personal"
-          class="mr-2"
-        />
-        <label for="type3" class="mr-2">Personal</label>
-      </div>
-
-      <div>
-        <label>
-          Person to Visit:
-          <input type="text" formControlName="personName" />
-        </label>
-      </div>
-
-      <div>
-        <label>
-          Date of Visit
-          <input type="text" formControlName="dateOfVisit" />
-        </label>
-      </div>
-
-      <div>
-        <label>
-          Time of Entry
-          <input type="time" formControlName="timeToVisit" />
-        </label>
-      </div>
-
-      <div>
-        <label>
-          Time of Leave
-          <input type="time" formControlName="timeToLeave" />
-        </label>
-      </div>
-
-      <div>
-        <button class="btn btn-primary">Submit</button>
-      </div>
-    </form>
+    </div>
   </div>
 </section>

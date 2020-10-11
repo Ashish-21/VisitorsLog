@@ -8,12 +8,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { VisitorformComponent } from './visitorform/visitorform.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { VisitorShowComponent } from './visitor-show/visitor-show.component';
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     HeaderComponent,
     VisitorformComponent,
+    FooterComponent,
+    VisitorShowComponent,
   ],
   imports: [
     BrowserModule,

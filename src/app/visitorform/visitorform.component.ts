@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-visitorform',
@@ -7,16 +7,29 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./visitorform.component.scss'],
 })
 export class VisitorformComponent implements OnInit {
-  visitorsEntry = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    type: new FormControl(''),
-    personName: new FormControl(''),
-    dateOfVisit: new FormControl(''),
-    timeToVisit: new FormControl(''),
-    timeToLeave: new FormControl(''),
-  });
-  constructor() {}
+  visitorsEntry: FormGroup;
+  visitorsDisplay: any;
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.visitorsEntry = this.fb.group({
+      name: '',
+      email: '',
+      typeOfVisit: '',
+      personNameToVisit: '',
+      dateOfVisit: new Date().toLocaleDateString('en-US'),
+      timeOfVisit: '',
+      timeOfLeave: '',
+    });
+
+    this.visitorsDisplay = JSON.parse(localStorage.getItem('visitorsEntry'));
+  }
+
+  submitForm = () => {
+    const uniqueKey = new Date().getUTCMilliseconds();
+    const visitorEntry =
+      JSON.parse(localStorage.getItem('visitorsEntry')) || [];
+    visitorEntry.push(this.visitorsEntry.value);
+    localStorage.setItem('visitorsEntry', JSON.stringify(visitorEntry));
+  };
 }
