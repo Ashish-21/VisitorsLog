@@ -6,23 +6,21 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 d-flex justify-content-center border p-5">
-        <form [formGroup]="visitorsEntry">
-          <div>
-            <label>
-              Name:
-              <input type="text" formControlName="name" />
-            </label>
+      <div class="col-md-12 d-flex justify-content-center">
+        <form [formGroup]="visitorsEntry" class="card card-layout shadow">
+          <div class="inputs">
+            <label> Name: </label>
+            <input type="text" formControlName="name" />
           </div>
 
-          <div>
+          <div class="inputs">
             <label>
               Email:
               <input type="email" formControlName="email" />
             </label>
           </div>
 
-          <div>
+          <div class="inputs">
             <label> Type Of Visit: </label><br />
             <input
               type="radio"
@@ -52,43 +50,37 @@
             <label for="type3" class="mr-2">Personal</label>
           </div>
 
-          <div>
+          <div class="inputs">
             <label>
               Person to Visit:
               <input type="text" formControlName="personNameToVisit" />
             </label>
           </div>
 
-          <div>
+          <div class="inputs">
             <label>
               Date of Visit
               <input type="text" formControlName="dateOfVisit" readonly />
             </label>
           </div>
 
-          <div>
+          <div class="inputs">
             <label>
               Time of Entry
               <input type="time" formControlName="timeOfVisit" />
             </label>
           </div>
 
-          <div>
+          <div class="inputs">
             <label>
               Time of Leave
               <input type="time" formControlName="timeOfLeave" />
             </label>
           </div>
 
-          <div>
-            <button
-              type="submit"
-              (click)="submitForm()"
-              class="btn btn-primary"
-            >
-              Submit
-            </button>
-          </div>
+          <button type="submit" (click)="submitForm()" class="btn btn-primary">
+            Submit
+          </button>
         </form>
       </div>
     </div>
